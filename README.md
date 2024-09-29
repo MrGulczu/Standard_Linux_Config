@@ -44,6 +44,15 @@ Copy ```LinuxConfig/i3/config``` to ```.config/i3/config```
 
 ```bash
 sudo cp LinuxConfig/i3/config .config/i3/config
+sudo cp LinuxConfig/i3/blurelock /bin
+sudo cp LinuxConfig/i3/i3exit /bin
+```
+Change permisions
+```bash
+sudo chown root:root /bin/blurelock
+sudo chown root:root /bin/i3exit
+sudo chmod +x /bin/blurelock
+sudo chomd +x /bin/i3exit
 ```
 
 ## 4. Install Fonts
@@ -108,3 +117,11 @@ sudo chsh -s /bin/zsh %username%
 ```
 
 Edit theme name in ```.zshrc``` file.
+
+
+## 9. SDDM
+
+```bash
+sudo cp -r LinuxConfig/sddm/sugar-candy /usr/share/sddm/themes/sugar-candy
+sudo cp LinuxConfig/sddm/default.conf /usr/lib/sddm/sddm.config.d/default.conf
+```
