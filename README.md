@@ -126,7 +126,7 @@ sudo cp -r LinuxConfig/sddm/sugar-candy /usr/share/sddm/themes/sugar-candy
 sudo cp LinuxConfig/sddm/default.conf /usr/lib/sddm/sddm.config.d/default.conf
 ```
 Change display-Manager
-``bash
+```bash
 sudo systemctl disable lightdm
 sudo systemctl enable sddm
 ```
