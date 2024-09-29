@@ -99,4 +99,12 @@ sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/too
 
 Copy ```LinuxConfig/gnzh.zsh-theme``` to 
 
+```bash
+sudo cp LinuxConfig/gnzh.zsh-theme /home/%username%/.oh-my-zsh/themes/gnzh.zsh-theme
+```
+
+```bash
+sudo chsh -s /bin/zsh %username%
+```
+
 Edit theme name in ```.zshrc``` file.
