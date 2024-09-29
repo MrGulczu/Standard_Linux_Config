@@ -11,6 +11,10 @@ sudo yay -S brave-bin
 ## 2. i3 Configuration
 Copy ```LinuxConfig\i3\config``` to ```.config\i3\config``` 
 
+```bash
+sudo cp LinuxConfig\i3\config .config\i3\config
+```
+
 ## 3. Install Fonts
 - Download Ubuntu Nerd Font and UbuntuMono Nerd Fornt
   
@@ -19,19 +23,36 @@ Copy ```LinuxConfig\i3\config``` to ```.config\i3\config```
   UbuntuMono Nerd Font: https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/UbuntuMono.zip
 - Unzip fotns and move them to ```\usr\share\fonts\TTF\```
 
+```bash
+sudo cp Ubuntu* \usr\share\fonts\TTF\
+```
 ## 4. Polybar Configuration
 Copy ```LinuxConfig\polybar\config.ini``` to ```\etc\polybar\config.ini```
 
+```bash
+sudo cp LinuxConfig\polybar\config.ini \etc\polybar\config.ini
+```
+
 Open File and edit display name 
+
+```bash
+sudo vim \etc\polybar\config.ini
+```
 
 ## 5. Default terminal
 
 Copy ```LinuxConfig\remove.Xresources``` to ```\home\%username%\.Xresources```
 
+```bash
+sudo cp LinuxConfig\remove.Xresources \home\%username%\.Xresources
+```
 ## 6. Picom
 
 Copy ```LinuxConfig\picom.conf``` to ```\etc\xdg\picom.conf```
 
+```bash
+sudo cp LinuxConfig\picom.conf \etc\xdg\picom.conf
+```
 ## 7. ZSH
 
 Run zsh shell and generate config file
