@@ -3,7 +3,7 @@ Standard linux config package list with configuration
 
 ## 1. Packages to install
 ```bash
-sudo pacman -S sddm qt5‑graphicaleffects qt5‑quickcontrols2 qt5‑svg polybar thunar obsidian vim picom rxvt-unicode unzip zsh
+sudo pacman -S sddm qt5-graphicaleffects qt5-quickcontrols2 qt5-svg  polybar thunar obsidian vim picom rxvt-unicode unzip zsh
 ```
 ```bash
 sudo yay -S brave-bin 
