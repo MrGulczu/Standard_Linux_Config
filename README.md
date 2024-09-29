@@ -16,10 +16,10 @@ cvt 1920 1080
 ```
 Copy line ```Modeline "1920x1080_60.00"  173.00  1920 2048 2248 2576  1080 1083 1088 1120 -hsync +vsync```
 
-Create file ```10-mionitor.conf``` in ```\etc\X11\xorg.conf.d\``` 
+Create file ```10-mionitor.conf``` in ```/etc/X11/xorg.conf.d/``` 
 
 ```bash
-sudo vim \etc\X11\xorg.conf.d\10-mionitor.conf
+sudo vim /etc/X11/xorg.conf.d/10-mionitor.conf
 ```
 File contents
 ```
@@ -40,10 +40,10 @@ EndSection
 
 ```
 ## 3. i3 Configuration
-Copy ```LinuxConfig\i3\config``` to ```.config\i3\config``` 
+Copy ```LinuxConfig/i3/config``` to ```.config/i3/config``` 
 
 ```bash
-sudo cp LinuxConfig\i3\config .config\i3\config
+sudo cp LinuxConfig/i3/config .config/i3/config
 ```
 
 ## 4. Install Fonts
@@ -52,37 +52,37 @@ sudo cp LinuxConfig\i3\config .config\i3\config
   Ubuntu Nerd Fornt: https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/Ubuntu.zip
   
   UbuntuMono Nerd Font: https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/UbuntuMono.zip
-- Unzip fotns and move them to ```\usr\share\fonts\TTF\```
+- Unzip fotns and move them to ```/usr/share/fonts/TTF/```
 
 ```bash
-sudo cp Ubuntu* \usr\share\fonts\TTF\
+sudo cp Ubuntu* /usr/share/fonts/TTF/
 ```
 ## 5. Polybar Configuration
-Copy ```LinuxConfig\polybar\config.ini``` to ```\etc\polybar\config.ini```
+Copy ```LinuxConfig/polybar/config.ini``` to ```/etc/polybar/config.ini```
 
 ```bash
-sudo cp LinuxConfig\polybar\config.ini \etc\polybar\config.ini
+sudo cp LinuxConfig/polybar/config.ini /etc/polybar/config.ini
 ```
 
 Open File and edit display name 
 
 ```bash
-sudo vim \etc\polybar\config.ini
+sudo vim /etc/polybar/config.ini
 ```
 
 ## 6. Default terminal
 
-Copy ```LinuxConfig\remove.Xresources``` to ```\home\%username%\.Xresources```
+Copy ```LinuxConfig/remove.Xresources``` to ```/home/%username%/.Xresources```
 
 ```bash
-sudo cp LinuxConfig\remove.Xresources \home\%username%\.Xresources
+sudo cp LinuxConfig/remove.Xresources /home/%username%/.Xresources
 ```
 ## 7. Picom
 
-Copy ```LinuxConfig\picom.conf``` to ```\etc\xdg\picom.conf```
+Copy ```LinuxConfig/picom.conf``` to ```/etc/xdg/picom.conf```
 
 ```bash
-sudo cp LinuxConfig\picom.conf \etc\xdg\picom.conf
+sudo cp LinuxConfig/picom.conf /etc/xdg/picom.conf
 ```
 ## 8. ZSH
 
@@ -97,6 +97,6 @@ Run Oh-my-zsh installation script
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 ```
 
-Copy ```LinuxConfig\gnzh.zsh-theme``` to 
+Copy ```LinuxConfig/gnzh.zsh-theme``` to 
 
 Edit theme name in ```.zshrc``` file.
