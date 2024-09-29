@@ -8,14 +8,45 @@ sudo pacman -S --needed sddm qt5‑graphicaleffects qt5‑quickcontrols2 qt5‑s
 ```bash
 sudo yay -S brave-bin 
 ```
-## 2. i3 Configuration
+
+## 2. Default Resolution
+
+```bash
+cvt 1920 1080
+```
+Copy line ```Modeline "1920x1080_60.00"  173.00  1920 2048 2248 2576  1080 1083 1088 1120 -hsync +vsync```
+
+Create file ```10-mionitor.conf``` in ```\etc\X11\xorg.conf.d\``` 
+
+```bash
+sudo vim \etc\X11\xorg.conf.d\10-mionitor.conf
+```
+File contents
+```
+Section "monitor"
+        Identifier "FirstMonitorOuput"
+        Option "Primary" "true"
+        Option "LeftOf" "SecondMonitorOutput"
+        Modeline "1920x1080_60.00"  173.00  1920 2048 2248 2576  1080 1083 1088 1120 -hsync +vsync
+        Option "PreferredMode" "1920x1080_60.00"
+EndSection
+
+Section "monitor2"
+        Identifier "SecondMonitorOutput"
+        Option "LeftOf" "FirstMonitorOutput"
+        Modeline "1920x1080_60.00"  173.00  1920 2048 2248 2576  1080 1083 1088 1120 -hsync +vsync
+        Option "PreferredMode" "1920x1080_60.00"
+EndSection
+
+```
+## 3. i3 Configuration
 Copy ```LinuxConfig\i3\config``` to ```.config\i3\config``` 
 
 ```bash
 sudo cp LinuxConfig\i3\config .config\i3\config
 ```
 
-## 3. Install Fonts
+## 4. Install Fonts
 - Download Ubuntu Nerd Font and UbuntuMono Nerd Fornt
   
   Ubuntu Nerd Fornt: https://github.com/ryanoasis/nerd-fonts/releases/download/v3.2.1/Ubuntu.zip
@@ -26,7 +57,7 @@ sudo cp LinuxConfig\i3\config .config\i3\config
 ```bash
 sudo cp Ubuntu* \usr\share\fonts\TTF\
 ```
-## 4. Polybar Configuration
+## 5. Polybar Configuration
 Copy ```LinuxConfig\polybar\config.ini``` to ```\etc\polybar\config.ini```
 
 ```bash
@@ -39,21 +70,21 @@ Open File and edit display name
 sudo vim \etc\polybar\config.ini
 ```
 
-## 5. Default terminal
+## 6. Default terminal
 
 Copy ```LinuxConfig\remove.Xresources``` to ```\home\%username%\.Xresources```
 
 ```bash
 sudo cp LinuxConfig\remove.Xresources \home\%username%\.Xresources
 ```
-## 6. Picom
+## 7. Picom
 
 Copy ```LinuxConfig\picom.conf``` to ```\etc\xdg\picom.conf```
 
 ```bash
 sudo cp LinuxConfig\picom.conf \etc\xdg\picom.conf
 ```
-## 7. ZSH
+## 8. ZSH
 
 Run zsh shell and generate config file
 
