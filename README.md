@@ -130,3 +130,8 @@ Change display-Manager
 sudo systemctl disable lightdm
 sudo systemctl enable sddm
 ```
+
+## 10. Wallpaper
+```bash
+sudo cp /LinuxConfig/Wallpaper.jpg /usr/share/endevouros/backgrounds/endeavouros-wallpaper.png
+```
